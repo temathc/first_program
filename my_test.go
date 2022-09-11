@@ -14,11 +14,3 @@ func TestNumberOne(t *testing.T) {
 	require.Equal(t, want, got)
 	fmt.Println(got)
 }
-
-func TestSum(t *testing.T) {
-	require.Equal(t, 7, Ssum(4, 3))
-}
-
-func TestLen(t *testing.T) {
-	require.Len(t, str, 8)
-}
