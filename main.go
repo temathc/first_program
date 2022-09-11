@@ -11,13 +11,24 @@ type User struct {
 	Age  int
 }
 
-func (u User) isA() bool {
-	return u.Age >= 18
+func (u User) GetName() string {
+	return u.Name
+}
+func (u User) PrintName() {
+	fmt.Println(u.Name)
+}
+
+type User2 struct {
+	User
+	id2 int
 }
 
 func main() {
-	u, n := User{11, "oleg", 18}, User{14, "dima", 11}
-	fmt.Println(u.isA(), n.isA())
+	u1 := User{11, "oleg", 18}
+	fmt.Println(u1.GetName())
+	var ss User2
+	fmt.Println(ss.User.GetName())
+	// еще раз посмотреть на использование структуры внудри другой структуры.....
 }
 
 func Pars() {
